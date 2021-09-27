@@ -43,6 +43,6 @@ jobs:
 
       - name: Push Docker images to GCR
         run: |
-          docker push "gcr.io/$GKE_PROJECT/cbr-rate"
-          docker push "gcr.io/$GKE_PROJECT/cbr-rate-client"
-          docker push "gcr.io/$GKE_PROJECT/cbr-rate-bot"
+          docker push "gcr.io/testproject-327317/cbr-rate"
+          docker push "gcr.io/testproject-327317/cbr-rate-client"
+          docker push "gcr.io/testproject-327317/cbr-rate-bot"
