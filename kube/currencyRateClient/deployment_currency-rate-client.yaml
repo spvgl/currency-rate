@@ -19,7 +19,7 @@ spec:
         app: currency-rate-client
     spec:
       containers:
-        - image: registry.gitlab.com/petrelevich/dockerregistry/currency-rate-client:v3
+        - image: gcr.io/testproject-327317/cbr-rate-client
           name: currency-rate-client
           ports:
             - containerPort: 8080

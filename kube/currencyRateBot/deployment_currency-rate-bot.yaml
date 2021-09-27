@@ -19,7 +19,7 @@ spec:
         app: currency-rate-bot
     spec:
       containers:
-        - image: registry.gitlab.com/petrelevich/dockerregistry/currency-rate-bot:v7
+        - image: gcr.io/testproject-327317/cbr-rate-bot
           name: currency-rate-bot
           ports:
             - containerPort: 8082

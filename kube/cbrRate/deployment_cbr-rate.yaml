@@ -19,7 +19,7 @@ spec:
         app: cbr-rate
     spec:
       containers:
-        - image: registry.gitlab.com/petrelevich/dockerregistry/cbr-rate:v1
+        - image: gcr.io/testproject-327317/cbr-rate
           name: cbr-rate
           ports:
             - containerPort: 8081
