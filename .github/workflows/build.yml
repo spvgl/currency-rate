@@ -2,6 +2,11 @@ name: Gradle Build
 
 on: [push]
 
+env:
+  GKE_PROJECT: ${{secrets.GKE_PROJECT}}
+  GKE_CLUSTER: demo
+  GKE_ZONE: us-central1
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,3 +30,19 @@ jobs:
 
       - name: List docker images
         run: docker images
+
+      - name: Setup Google Cloud CLI
+        uses: google-github-actions/setup-gcloud@94337306dda8180d967a56932ceb4ddcf01edae7
+        with:
+          service_account_key: ${{secrets.GKE_SA_KEY}}
+          project_id: ${{secrets.GKE_PROJECT}}
+
+      - name: Configure docker to use the gcloud command-line tool as a credential helper
+        run: |-
+          gcloud --quiet auth configure-docker
+
+      - name: Push Docker images to GCR
+        run: |
+          docker push "gcr.io/$GKE_PROJECT/cbr-rate"
+          docker push "gcr.io/$GKE_PROJECT/cbr-rate-client"
+          docker push "gcr.io/$GKE_PROJECT/cbr-rate-bot"
