@@ -5,7 +5,7 @@ jib {
     }
     to {
         tags = ['v7', 'latest']
-//        image = 'registry.gitlab.com/petrelevich/dockerregistry/currency-rate-bot'
+        image = 'gcr.io/testproject-327317/cbr-rate-bot'
 //        auth {
 //            username = gitlabUser
 //            password = gitlabPassword

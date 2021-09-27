@@ -5,7 +5,7 @@ jib {
     }
     to {
         tags = ['v1', 'latest']
-//        image = 'registry.gitlab.com/petrelevich/dockerregistry/cbr-rate'
+        image = 'gcr.io/testproject-327317/cbr-rate'
 //        auth {
 //            username = gitlabUser
 //            password = gitlabPassword
