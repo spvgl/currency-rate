@@ -15,12 +15,6 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 class CurrencyRateParserXmlTest {
 
     @Test
-    public void someTest()
-    {
-        assertThat(false).isTrue();
-    }
-
-    @Test
     void parseTest() throws IOException, URISyntaxException {
         //given
         var parser = new CurrencyRateParserXml();

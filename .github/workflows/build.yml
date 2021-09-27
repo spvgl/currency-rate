@@ -20,5 +20,8 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Build
-        run: ./gradlew build
+      - name: Build Docker images with jib
+        run: ./gradlew jibDockerBuild
+
+      - name: List docker images
+        run: docker images
