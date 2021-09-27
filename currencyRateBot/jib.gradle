@@ -5,11 +5,11 @@ jib {
     }
     to {
         tags = ['v7', 'latest']
-        image = 'registry.gitlab.com/petrelevich/dockerregistry/currency-rate-bot'
-        auth {
-            username = gitlabUser
-            password = gitlabPassword
-        }
+//        image = 'registry.gitlab.com/petrelevich/dockerregistry/currency-rate-bot'
+//        auth {
+//            username = gitlabUser
+//            password = gitlabPassword
+//        }
     }
 }
 // ./gradlew jibDockerBuild

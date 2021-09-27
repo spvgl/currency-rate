@@ -1,0 +1,9 @@
+name: 'test'
+on:
+  push:
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'echo test'
+        run: echo "Test"
